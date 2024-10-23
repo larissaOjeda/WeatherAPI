@@ -15,7 +15,7 @@ Setup Instructions
 1. Clone the Repository
 bash
 Copy code
-git clone <repository-url>
+git clone https://github.com/larissaOjeda/WeatherAPI.git
 cd weather_forecast_app
 2. Set Up Virtual Environment (Optional but Recommended)
 It’s a good idea to use a virtual environment to isolate your dependencies.
