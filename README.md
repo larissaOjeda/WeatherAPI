@@ -1,71 +1,82 @@
-Weather Forecast Application
+# Weather Forecast Application
+
 This project is a FastAPI-based application that provides weather forecasts for flight routes, including the predicted temperature for the origin and destination cities.
 
-Features
-Fetches weather data for flights using the Open-Meteo API.
-Returns the predicted temperature for both origin and destination airports.
-Asynchronous calls for efficient data fetching.
-Uses pandas for handling weather data.
-Prerequisites
+## Features
+
+- Fetches weather data for flights using the Open-Meteo API.
+- Returns the predicted temperature for both origin and destination airports.
+- Asynchronous calls for efficient data fetching.
+- Uses **pandas** for handling weather data.
+
+## Prerequisites
+
 To run the project, ensure you have the following installed:
 
-Python 3.8+
-pip (Python package installer)
-Setup Instructions
-1. Clone the Repository
-bash
-Copy code
-git clone https://github.com/larissaOjeda/WeatherAPI.git
+- Python 3.8+
+- `pip` (Python package installer)
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/larissaOjeda/WeatherAPI
 cd weather_forecast_app
-2. Set Up Virtual Environment (Optional but Recommended)
+```
+
+### 2. Set Up Virtual Environment (Optional but Recommended)
 It’s a good idea to use a virtual environment to isolate your dependencies.
 
 On macOS/Linux:
-
-bash
-Copy code
+```bash
 python3 -m venv venv
 source venv/bin/activate
-On Windows:
+```
 
-bash
-Copy code
+On Windows:
+```bash
 python -m venv venv
 venv\Scripts\activate
-3. Install Dependencies
+```
+
+### 3. Install Dependencies
 Once inside the virtual environment (if used), install the required dependencies from requirements.txt:
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
-4. Add Your Data
+```
+
+### 4. Add Your Data
 Ensure the CSV file containing flight data (challenge_dataset_deal_engine.csv) is present in the data/ folder. This file should contain the following columns:
 
-origin_latitude
-origin_longitude
-destination_latitude
-destination_longitude
-flight_num
-origin
-destination
-5. Run the FastAPI Application
+- origin_latitude
+- origin_longitude
+- destination_latitude
+- destination_longitude
+- flight_num
+- origin
+- destination
+
+
+### 5. Run the FastAPI Application
 Run the FastAPI app using Uvicorn:
 
-bash
-Copy code
+```bash
 uvicorn app.main:app --reload
+```
 The application will be available at: http://127.0.0.1:8000
-6. Access the Weather Forecast API
+
+### 6. Access the Weather Forecast API
 You can fetch the weather report for flights using the following endpoint:
 
-arduino
-Copy code
+```bash
 GET http://127.0.0.1:8000/weather/flights-report
+```
 This will return a JSON response with the weather report for each flight in the provided dataset, including the predicted temperature for both the origin and destination airports.
 
-Example JSON Response
-json
-Copy code
+## Example JSON Response
+```json
 {
   "flights_weather_report": [
     {
@@ -77,9 +88,10 @@ Copy code
     }
   ]
 }
-Project Structure
-bash
-Copy code
+```
+
+## Project Structure
+```bash
 weather_forecast_app/
 ├── app/
 │   ├── __init__.py
@@ -91,9 +103,8 @@ weather_forecast_app/
 ├── data/
 │   ├── challenge_dataset_deal_engine.csv  # CSV file with flight data
 ├── requirements.txt         # Python dependencies
-Troubleshooting
-404 Not Found: Make sure you're accessing the correct route, which is /weather/flights-report.
-422 Unprocessable Entity: This could be due to missing or incorrectly formatted data in the flight dataset. Ensure all fields are properly defined and available.
-Contact
-If you encounter any issues, feel free to open an issue in the repository or contact the project maintainers.
+```
 
+## Troubleshooting
+- 404 Not Found: Make sure you're accessing the correct route, which is /weather/flights-report.
+- 422 Unprocessable Entity: This could be due to missing or incorrectly formatted data in the flight dataset. Ensure all fields are properly defined and available.
