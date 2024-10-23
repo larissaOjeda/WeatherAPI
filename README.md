@@ -25,8 +25,8 @@ git clone https://github.com/larissaOjeda/WeatherAPI
 cd weather_forecast_app
 ```
 
-### 2. Set Up Virtual Environment (Optional but Recommended)
-It’s a good idea to use a virtual environment to isolate your dependencies.
+### 2. Set Up Virtual Environment
+Highly recommended to use it :) 
 
 On macOS/Linux:
 ```bash
@@ -41,7 +41,7 @@ venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
-Once inside the virtual environment (if used), install the required dependencies from requirements.txt:
+To install the dependencies: 
 
 ```bash
 pip install -r requirements.txt
