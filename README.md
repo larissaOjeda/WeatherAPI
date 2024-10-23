@@ -90,7 +90,7 @@ This will return a JSON response with the weather report for each flight in the 
 }
 ```
 
-![Alt text](/Users/larissatrasvina/WeatherAPI/example_output.png)
+![Weather Report example](./images/example_output.png))
 
 ## Project Structure
 ```bash
